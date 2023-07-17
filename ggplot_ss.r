@@ -24,3 +24,6 @@ ggplot(df1, aes(x=treatment, y=number_of_treg_cells, fill = treatment)) +
            method = "wilcox_test", label = "p = {p.adj.format}{p.adj.signif}",
            p.adjust.method = "fdr", p.adjust.by = "group", hide.ns = T, label.size = 6, size = 1) + 
   ylab("% Tregs") + ggtitle("Percentage of Tregs Before and After Immunotherapy") + themes 
+
+#save plot
+ggsave("ggplot_ss.tiff", width = 20, height = 20, units = "cm")
